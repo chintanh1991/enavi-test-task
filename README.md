@@ -4,7 +4,7 @@ Enavi Test task : https://www.notion.so/Chintan-Shah-App-Developer-Test-Tasks-e8
 **Technology used :**
 Python Django
 
-**ENV file location : **
+**ENV file location :**
 Product_search\SearchApp\.env
 
 **Command lines to be followed**
