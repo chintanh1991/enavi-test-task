@@ -1,0 +1,136 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    {% block head_css %}
+    {% endblock %}
+
+    {% block header_scripts %}
+    {% endblock %}
+
+    <link  rel="stylesheet"  href="https://unpkg.com/@shopify/polaris@5.12.0/dist/styles.css"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- <script>
+      document.addEventListener('DOMContentLoaded', function() {
+    	alert("Ready!");
+
+        $.ajax({
+          type: 'GET',
+          url: 'products_list',
+          success: function(response){
+            console.log(response);
+		  }
+        });
+	}, false); -->
+    </script>
+</head>
+<body data-new-gr-c-s-check-loaded="14.1058.0" data-gr-ext-installed="" style="background-color: rgb(246, 246, 247); color: rgb(32, 34, 35);">
+	<div id="__next">
+		
+			<div class="Polaris-Frame" data-polaris-layer="true">
+				
+				<main class="Polaris-Frame__Main" id="AppFrameMain" data-has-global-ribbon="false">
+					<div class="Polaris-Frame__Content">
+						<div class="Polaris-Card__Section">
+							<div class="Polaris-Page Polaris-Page--fullWidth">
+								<div class="Polaris-Page-Header Polaris-Page-Header--isSingleRow Polaris-Page-Header--noBreadcrumbs Polaris-Page-Header--mediumTitle">
+									<div class="Polaris-Page-Header__Row">
+										<div class="Polaris-Page-Header__TitleWrapper">
+											<div>
+												<div class="Polaris-Header-Title__TitleAndSubtitleWrapper">
+													<h1 class="Polaris-Header-Title">Products</h1></div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<form action="search_product_list" method="post" enctype="multipart/form-data">
+									<div class="input-group">
+									  <input type="search" class="form-control rounded" name="get_product" id ="get_product" placeholder="enter product name" aria-label="Search" value='' aria-describedby="search-addon" />
+									  <button type="submit" class="btn btn-outline-primary">search</button>
+									</div>
+								</form>
+								{% if search_term != null and search_term.length != 0 %}
+								<div id = "product_search" ><p>Search results for <b>"{{search_term}}"</b></p></div>
+								{% endif %}
+								<div class="Polaris-Page__Content">
+									<div class="Polaris-Layout">
+									  <div class="Polaris-Layout__Section Polaris-Layout__Section--oneHalf">
+										<div class="Polaris-Card">
+										  <div class="Polaris-Card__Section">
+											
+											<div class="Polaris-ResourceList__ResourceListWrapper">
+												{% if product.length != 0 %}
+												{% for x in product %}
+												<ul class="Polaris-ResourceList" aria-live="polite">
+													<li class="Polaris-ResourceItem__ListItem">
+													  <div class="Polaris-ResourceItem__ItemWrapper">
+														<div class="Polaris-ResourceItem">
+														  <div class="Polaris-ResourceItem__Container">
+															<div class="pro_number">
+															  <p>{{x.sr_number}}. </p>
+															</div>
+															<div class="Polaris-ResourceItem__Owned">
+															  <div class="Polaris-ResourceItem__Media"><span class="Polaris-Thumbnail Polaris-Thumbnail--sizeMedium"><img src="{{x.product_img}}"></span></div>
+															</div>
+															<div class="Polaris-ResourceItem__Content">
+															  <div class="inner-content">
+																<h3><span class="Polaris-TextStyle--variationStrong">{{x.product_title}} {{x.variant_title}}</span></h3>
+																<h3><span class="Polaris-TextStyle--variationStrong">{{x.batch_code}}</span></h3>
+															  </div>
+															</div>
+															<div class="Polaris-Stack__Item">
+															  <div class="Polaris-ButtonGroup">
+																<div style="display: flex; text-transform: capitalize;">
+																  {{x.status}}
+																</div>
+															  </div>
+															</div>
+														  </div>
+														</div>
+													  </div>
+													</li>
+												</ul>
+												{% endfor %}
+												{% else %}
+												<p><i>No results found!</i></p>
+												{% endif %}
+											</div>
+										  </div>  
+										</div>  
+									  </div>
+									</div>     
+									<div style="text-align: center;">
+										<nav class="Polaris-Pagination" aria-label="Pagination">
+										{% if product.paginator.num_pages > 1 %}
+										{% if product.has_previous %}
+										
+											<a href="?page={{ product.previous_page_number }}" class="btn btn-primary" style="margin-right: 10px"> Previous </a>
+											{% endif %}
+											
+											<input name="page_number" id="page_number" value='{{product.number}}' type="hidden"></input>
+											<span>Page {{ product.number }} of {{ product.paginator.num_pages }}</span>
+											{% if product.has_next %}
+											<a href="?page={{ product.next_page_number }}" class="btn btn-primary" style="margin-left: 10px"> Next </a>
+											{% endif %}
+										{% endif %}
+										</nav>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</main>
+			</div>
+			<div id="PolarisPortalsContainer">
+				<div data-portal-id="Polarisportal1">
+					<div class="Polaris-Frame-ToastManager" aria-live="assertive"></div>
+				</div>
+			</div>
+		</div>
+</body>
+</html>

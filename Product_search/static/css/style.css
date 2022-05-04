@@ -1,0 +1,249 @@
+#AppFrameMain {
+    padding-left:0px;
+}
+#AppFrameNav {
+    display:none; 
+}
+
+.Polaris-Header-Title {
+text-transform:capitalize;
+}
+.Polaris-Label label {
+    text-transform:capitalize;
+}
+
+.add-pro-form .Polaris-FormLayout__Item {
+    display: flex;
+    width: 100%;
+}
+
+.add-pro-form .Polaris-Labelled__LabelWrapper {
+    width: 15%;
+    justify-content: flex-end;
+    padding-right: 2%;
+    align-items: center;
+}
+
+.add-pro-form .Polaris-Connected {
+    position: relative;
+    display: flex;
+    width: 85%;
+}
+
+.desc-field .Polaris-Labelled__LabelWrapper {
+    align-items: flex-start !important;
+}
+
+.desc-field .ck-editor {
+    width:85% !important;
+}
+
+.upld_img .Polaris-Labelled__LabelWrapper {
+    align-items: flex-start;
+}
+.upld_img form {
+    width: 85%;
+    padding: 10px;
+    min-height: 120px;
+    color: #637381;
+    border: none;
+}
+
+.add-pro-form .Polaris-Labelled__LabelWrapper {
+    margin-bottom:0px;
+}
+
+.add-pro-form .Polaris-Labelled__LabelWrapper .Polaris-Label label {
+    margin:0px !important;
+}
+
+.add-pro-form .dz-default.dz-message {
+z-index: 10;
+    position: absolute;
+    margin: 0 !important;
+    color: #637381;
+    
+}
+
+.add-pro-form .dropzone .dz-message .dz-button {
+    text-transform:lowercase;
+    color: #637381;
+}
+
+.pro_lists .pro_number {
+    width: 4%;
+    display:flex;
+    align-items: flex-start;
+}
+
+.pro_lists .Polaris-Thumbnail {
+    width:10rem;
+    border: none;
+}
+
+.pro_lists .Polaris-ResourceItem__Container {
+    /* align-items: center; */
+}
+
+.pro_lists .Polaris-ResourceItem__Content h3 {
+    text-transform: capitalize;
+    padding-top:10px;
+    padding-bottom:10px;;
+}
+
+.pro_lists  .Polaris-ResourceItem__Content {
+    margin-top:auto;
+    margin-bottom:auto;
+
+}
+
+.pro_lists .Polaris-Stack__Item {
+    margin-top:auto;
+    margin-bottom:auto;
+
+}
+
+.pro_lists .Polaris-ButtonGroup div {
+display:flex;
+}
+
+.del_btn {
+    background: transparent;
+    border: none;
+    cursor:pointer;
+}
+
+.pro_lists .Polaris-Card__Section {
+    padding:1rem;
+}
+
+.pro_lists .Polaris-ResourceItem__Media {
+    margin-right:1.5rem;
+}
+
+.upld_btn_sec .Polaris-ResourceItem:hover {
+    background:transparent !important;
+}
+
+.pro_lists .Polaris-Heading {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+#popular-model {
+    padding: 25px !important;
+    width: 75%;
+}
+
+.edit_data {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.edit_data .left_side {
+    width:40%;
+}
+.edit_data .right_side {
+    width:60%;
+}
+.right_side .Polaris-Labelled__LabelWrapper {
+    width: 20%;
+    justify-content: flex-end;
+    padding-right: 2%;
+    align-items: center;
+}
+.right_side .Polaris-Connected {
+    position: relative;
+    display: flex;
+    width: 80%;
+}
+
+.right_side .Polaris-FormLayout__Item {
+    /* margin-top:1rem; */
+    margin-left:0px;
+    max-width: 100%;
+    display: flex;
+}
+
+.inner-desc .ck-editor {
+    width:80% !important;
+}
+
+#product_image .Polaris-Thumbnail {
+    width:100%;
+}
+#product_image .Polaris-Thumbnail img {
+    width:100%;
+}
+
+.left_side input {
+    margin-top:1rem;
+}
+
+.fancybox-button svg {
+    border: 1px solid #000;
+    border-radius: 50%;
+}
+
+.fancybox-is-open .fancybox-bg {
+    opacity:0.65 !important;
+}
+.left_side input:focus-visible {
+    outline:none;
+}
+
+.contactus-form p{
+    font-size: 12pt;
+    color: #212b36;
+    margin-bottom:1rem;
+}
+
+.pro_lists .Polaris-Page__Content .Polaris-Layout .Polaris-Card__Section .Polaris-Thumbnail img{
+    width:100%;
+}
+.slider-on {
+    padding:1px 6px;
+}
+.currency-sign {
+    color: #000;
+    font-size: inherit;
+    display: block;
+    z-index: 11;
+    padding-left: 6px;
+    padding-right: 2px;
+}
+
+input#Price {
+    padding-left: 0;
+}
+
+.example {
+    margin-bottom: 4rem;
+}
+
+.example .m--s-ipt {
+        width:100%;
+        border-radius: 3px;
+        padding:0.5rem 1.2rem;
+        min-height:3.6rem;
+        border-color:#c4cdd5;
+}
+
+.example .m--s-list {
+    z-index:9;
+    margin-top:-3px !important;
+}
+
+.example .m--s-tag-container {
+    padding-bottom:0px !important;
+}
+
+.example .m--s-real-ipt {
+    line-height:inherit;
+}
+
+
+#popular-view-model{
+    padding: 25px !important;
+    width: 75%;
+}
